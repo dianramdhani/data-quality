@@ -18,6 +18,7 @@ import { UserComponent } from './pages/user/user.component';
 import { DashboardComponent } from './pages/user/dashboard/dashboard.component';
 import { ObjectMakerComponent } from './pages/user/object-maker/object-maker.component';
 import { NormalizeRuleComponent } from './pages/user/normalize-rule/normalize-rule.component';
+import { RuleFormComponent } from './pages/user/normalize-rule/rule-form/rule-form.component';
 import { SourceDataUploadComponent } from './pages/user/source-data-upload/source-data-upload.component';
 import { AccountSettingsComponent } from './pages/user/account-settings/account-settings.component';
 
@@ -32,7 +33,8 @@ import { AccountSettingsComponent } from './pages/user/account-settings/account-
     ObjectMakerComponent,
     DashboardComponent,
     NormalizeRuleComponent,
-    SourceDataUploadComponent
+    SourceDataUploadComponent,
+    RuleFormComponent
   ],
   imports: [
     BrowserModule,
@@ -57,6 +59,9 @@ import { AccountSettingsComponent } from './pages/user/account-settings/account-
     NgbModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [
+    RuleFormComponent
+  ]
 })
 export class AppModule { }

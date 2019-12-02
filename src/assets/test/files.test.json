@@ -1,0 +1,112 @@
+[
+    {
+        "id": "32cbd515-9d67-42fa-94e3-c542f455d718",
+        "location": "./file/32cbd515-9d67-42fa-94e3-c542f455d718",
+        "filename": "4XCg4DX.png",
+        "uploadDate": "2019-10-22T08:05:20.267+0000",
+        "filesize": 5817,
+        "totalRecords": 0,
+        "mergedRecords": 0,
+        "label": null,
+        "status": "Failed"
+    },
+    {
+        "id": "aef58d70-c74c-4e65-abf3-aa653c60d001",
+        "location": "./file/aef58d70-c74c-4e65-abf3-aa653c60d001",
+        "filename": "sampel normalisasi2.pdf",
+        "uploadDate": "2019-09-26T10:06:24.440+0000",
+        "filesize": 10853,
+        "totalRecords": 52,
+        "mergedRecords": 0,
+        "label": null,
+        "status": "Matched"
+    },
+    {
+        "id": "766bc86a-cf7a-490c-9bb0-6c0b12d6fe18",
+        "location": "./file/766bc86a-cf7a-490c-9bb0-6c0b12d6fe18",
+        "filename": "SampleData3.xlsx",
+        "uploadDate": "2019-09-26T09:52:49.448+0000",
+        "filesize": 10592,
+        "totalRecords": 8,
+        "mergedRecords": 7,
+        "label": null,
+        "status": "Matched"
+    },
+    {
+        "id": "75991445-65a7-4144-ba32-10d8dbc4ade3",
+        "location": "./file/75991445-65a7-4144-ba32-10d8dbc4ade3",
+        "filename": "SampleData2.xlsx",
+        "uploadDate": "2019-09-26T09:44:47.494+0000",
+        "filesize": 10590,
+        "totalRecords": 8,
+        "mergedRecords": 8,
+        "label": null,
+        "status": "Completed"
+    },
+    {
+        "id": "c6b48a3b-ef7c-4ad4-a6b3-bed0c2580279",
+        "location": "./file/c6b48a3b-ef7c-4ad4-a6b3-bed0c2580279",
+        "filename": "sample1.xml",
+        "uploadDate": "2019-09-26T08:44:45.039+0000",
+        "filesize": 1871,
+        "totalRecords": 8,
+        "mergedRecords": 8,
+        "label": null,
+        "status": "Completed"
+    },
+    {
+        "id": "e6f00201-4f6d-4596-b41b-9bc432569ce7",
+        "location": "./file/e6f00201-4f6d-4596-b41b-9bc432569ce7",
+        "filename": "sample1.accdb",
+        "uploadDate": "2019-09-26T08:44:09.921+0000",
+        "filesize": 290816,
+        "totalRecords": 8,
+        "mergedRecords": 8,
+        "label": null,
+        "status": "Completed"
+    },
+    {
+        "id": "d148dc2c-0db3-4329-85b3-d70afd99cbdc",
+        "location": "./file/d148dc2c-0db3-4329-85b3-d70afd99cbdc",
+        "filename": "SampleData1 - titikKoma.csv",
+        "uploadDate": "2019-09-26T08:43:16.653+0000",
+        "filesize": 768,
+        "totalRecords": 8,
+        "mergedRecords": 5,
+        "label": null,
+        "status": "Matched"
+    },
+    {
+        "id": "6818cad3-fa6c-42c2-b54c-6853fb0f8b36",
+        "location": "./file/6818cad3-fa6c-42c2-b54c-6853fb0f8b36",
+        "filename": "sample1.txt",
+        "uploadDate": "2019-09-26T08:41:56.874+0000",
+        "filesize": 808,
+        "totalRecords": 0,
+        "mergedRecords": 0,
+        "label": null,
+        "status": "Failed"
+    },
+    {
+        "id": "781bc130-e209-43a7-9b50-908c0829eb62",
+        "location": "./file/781bc130-e209-43a7-9b50-908c0829eb62",
+        "filename": "Sampel normalisasi 4.xls",
+        "uploadDate": "2019-09-26T08:40:06.934+0000",
+        "filesize": 50176,
+        "totalRecords": 40,
+        "mergedRecords": 1,
+        "label": null,
+        "status": "Matched"
+    },
+    {
+        "id": "472710e7-17b1-4995-bc6b-1aa50fd09149",
+        "location": "./file/472710e7-17b1-4995-bc6b-1aa50fd09149",
+        "filename": "Sampel normalisasi 4.xls",
+        "uploadDate": "2019-09-26T08:40:04.678+0000",
+        "filesize": 50176,
+        "totalRecords": 40,
+        "mergedRecords": 1,
+        "label": null,
+        "status": "Matched"
+    }
+]

@@ -1,0 +1,23 @@
+[
+    {
+        "objectStorage": {
+            "id": 2,
+            "userId": 1,
+            "objectName": "Student",
+            "objectTable": "STUDENT",
+            "creationDate": "2019-11-27"
+        },
+        "objectProperties": [
+            {
+                "id": 3,
+                "objectId": 2,
+                "property": "name"
+            },
+            {
+                "id": 4,
+                "objectId": 2,
+                "property": "nisn"
+            }
+        ]
+    }
+]
