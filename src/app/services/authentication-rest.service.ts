@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { tap } from 'rxjs/operators';
-import { Observable } from 'rxjs';
+import { tap, catchError } from 'rxjs/operators';
+import { Observable, throwError } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -9,6 +9,7 @@ import { Observable } from 'rxjs';
 export class AuthenticationRestService {
   private url: string;
   private storagePrefix: string;
+  private user: AuthResponse;
 
   constructor(private httpClient: HttpClient) {
     const config = window['config']();
@@ -18,7 +19,10 @@ export class AuthenticationRestService {
 
   login(args: { username: string, password: string }): Observable<AuthResponse> {
     return this.httpClient.post<AuthResponse>(`${this.url}/login`, args)
-      .pipe(tap(({ token }) => localStorage.setItem(`${this.storagePrefix}-token`, token)))
+      .pipe(
+        catchError(errorRes => throwError(errorRes.message)),
+        tap(({ token }) => localStorage.setItem(`${this.storagePrefix}-token`, token))
+      );
   }
 
   logout() {

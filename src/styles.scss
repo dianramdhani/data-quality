@@ -1,1 +1,73 @@
-/* You can add global styles to this file, and also import other style files */
+html,
+body {
+    overflow: hidden;
+}
+
+// Custom Button Form
+.tr-btn-form {
+    padding: 4px 50px;
+    margin: 0 2px;
+}
+
+// Custom Table
+.tr-btn-table {
+    font-size: 10px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+.tr-table tbody th {
+    font-family: -apple-system, BlinkMacSystemFont, "Inter UI", Roboto, sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: .5px;
+    text-transform: uppercase;
+    color: #8392a5;
+}
+
+.table-hover {
+    cursor: pointer;
+}
+
+.tr-fixed-table {
+    table-layout: fixed;
+    word-wrap: break-word;
+
+    td {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+}
+
+.tr-custom-file-label {
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.table-responsive {
+    zoom: 85%;
+}
+
+// Custom Datepicker
+.tr-datepicker-week tbody tr:hover {
+    transition: all 0.2s ease-in-out;
+    background-color: #0168fa;
+}
+
+.tr-datepicker-week tbody tr:hover td a {
+    color: #fff;
+}
+
+.tr-datepicker-week tbody tr:hover .ui-datepicker-week-col {
+    color: #fff;
+}
+
+.ui-datepicker .ui-datepicker-calendar td {
+    background-color: transparent;
+}
+
+// photo
+.photo {
+    height: 100px;
+}

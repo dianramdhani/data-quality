@@ -11,6 +11,8 @@ import { AuthenticationRestService } from '../../services';
 })
 export class LoginComponent implements OnInit {
   formLogin: FormGroup;
+  error: string;
+  spinner = false;
 
   constructor(private auth: AuthenticationRestService, private router: Router) {
     this.formLogin = new FormGroup({
@@ -23,6 +25,15 @@ export class LoginComponent implements OnInit {
 
   login() {
     this.auth.login(this.formLogin.value)
-      .subscribe(() => this.router.navigate(['dashboard']));
+      .subscribe(
+        () => {
+          this.spinner = false;
+          this.router.navigate(['user']);
+        },
+        errMsg => {
+          this.spinner = false;
+          this.error = errMsg;
+        }
+      );
   }
 }
