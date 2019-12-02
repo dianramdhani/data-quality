@@ -14,8 +14,12 @@ import { WrapperComponent } from './core/wrapper/wrapper.component';
 
 // PAGES
 import { LoginComponent } from './pages/login/login.component';
-import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { UserComponent } from './pages/user/user.component';
+import { DashboardComponent } from './pages/user/dashboard/dashboard.component';
+import { ObjectMakerComponent } from './pages/user/object-maker/object-maker.component';
+import { NormalizeRuleComponent } from './pages/user/normalize-rule/normalize-rule.component';
+import { SourceDataUploadComponent } from './pages/user/source-data-upload/source-data-upload.component';
+import { AccountSettingsComponent } from './pages/user/account-settings/account-settings.component';
 
 @NgModule({
   declarations: [
@@ -23,8 +27,12 @@ import { UserComponent } from './pages/user/user.component';
     SpinnerComponent,
     WrapperComponent,
     LoginComponent,
+    UserComponent,
+    AccountSettingsComponent,
+    ObjectMakerComponent,
     DashboardComponent,
-    UserComponent
+    NormalizeRuleComponent,
+    SourceDataUploadComponent
   ],
   imports: [
     BrowserModule,
