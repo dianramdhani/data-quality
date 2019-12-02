@@ -1,1 +1,37 @@
-<p>object-maker works!</p>
+<div class="d-md-flex align-items-center justify-content-between mg-b-20 mg-lg-b-25 mg-xl-b-30">
+    <h4 class="mg-b-0 tx-spacing--1">Object Maker</h4>
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb breadcrumb-style1 mg-b-10">
+            <li class="breadcrumb-item">Home</li>
+            <li class="breadcrumb-item active" aria-current="page">Object Maker</li>
+        </ol>
+    </nav>
+</div>
+<div class="card">
+    <h6 class="card-header mg-b-0 bd-b-0">List Objects</h6>
+    <div class="table-responsive">
+        <button class="btn btn-primary" (click)="openObjectForm()">Add Object</button>
+        <table class="table table-hover table-dashboard mb-0">
+            <thead>
+                <tr>
+                    <th>Object Name</th>
+                    <th>Object Table</th>
+                    <th>Properties</th>
+                    <th>Creation Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let datum of data">
+                    <td>{{ datum.objectStorage.objectName }}</td>
+                    <td>{{ datum.objectStorage.objectTable }}</td>
+                    <td>
+                        <span class="badge badge-primary" *ngFor="let property of datum.objectProperties">
+                            {{ property.property }}
+                        </span>
+                    </td>
+                    <td>{{ datum.objectStorage.creationDate }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

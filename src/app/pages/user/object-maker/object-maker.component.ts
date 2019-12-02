@@ -1,4 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+
+import { ObjectMaker } from './object-maker.model';
+
+import { ObjectFormComponent } from './object-form/object-form.component';
 
 @Component({
   selector: 'app-object-maker',
@@ -6,10 +12,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./object-maker.component.scss']
 })
 export class ObjectMakerComponent implements OnInit {
+  data: ObjectMaker[];
 
-  constructor() { }
+  constructor(private httpClient: HttpClient, private modal: NgbModal) { }
 
-  ngOnInit() {
+  async ngOnInit() {
+    this.data = await this.httpClient.get<ObjectMaker[]>('./assets/test/object.test.json').toPromise();
+    console.log(this.data);
   }
 
+  openObjectForm() {
+    const modalRef = this.modal.open(ObjectFormComponent);
+  }
 }

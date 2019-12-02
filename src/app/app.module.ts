@@ -17,6 +17,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { UserComponent } from './pages/user/user.component';
 import { DashboardComponent } from './pages/user/dashboard/dashboard.component';
 import { ObjectMakerComponent } from './pages/user/object-maker/object-maker.component';
+import { ObjectFormComponent } from './pages/user/object-maker/object-form/object-form.component';
 import { NormalizeRuleComponent } from './pages/user/normalize-rule/normalize-rule.component';
 import { RuleFormComponent } from './pages/user/normalize-rule/rule-form/rule-form.component';
 import { SourceDataUploadComponent } from './pages/user/source-data-upload/source-data-upload.component';
@@ -35,6 +36,7 @@ import { AccountSettingsComponent } from './pages/user/account-settings/account-
     UserComponent,
     DashboardComponent,
     ObjectMakerComponent,
+    ObjectFormComponent,
     NormalizeRuleComponent,
     RuleFormComponent,
     SourceDataUploadComponent,
@@ -69,7 +71,8 @@ import { AccountSettingsComponent } from './pages/user/account-settings/account-
   providers: [],
   bootstrap: [AppComponent],
   entryComponents: [
-    RuleFormComponent
+    RuleFormComponent,
+    ObjectFormComponent
   ]
 })
 export class AppModule { }
