@@ -21,14 +21,16 @@ export class LoginComponent implements OnInit {
     });
   }
 
-  ngOnInit() { }
+  ngOnInit() {
+    this.auth.logout();
+  }
 
   login() {
     this.auth.login(this.formLogin.value)
       .subscribe(
         () => {
           this.spinner = false;
-          this.router.navigate(['user']);
+          this.router.navigate(['/user/dashboard']);
         },
         errMsg => {
           this.spinner = false;

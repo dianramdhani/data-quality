@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
+import { AuthGuard } from './services/auth.guard';
+
 import { LoginComponent } from './pages/login/login.component';
 import { UserComponent } from './pages/user/user.component';
 import { AccountSettingsComponent } from './pages/user/account-settings/account-settings.component';
@@ -13,7 +15,7 @@ import { SourceDataUploadComponent } from './pages/user/source-data-upload/sourc
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
   {
-    path: 'user', component: UserComponent, children: [
+    path: 'user', component: UserComponent, canActivate: [AuthGuard], children: [
       { path: 'dashboard', component: DashboardComponent },
       { path: 'object-maker', component: ObjectMakerComponent },
       { path: 'normalize-rule', component: NormalizeRuleComponent },

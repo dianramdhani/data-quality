@@ -20,8 +20,8 @@ export class WrapperComponent implements AfterViewInit, OnDestroy {
   user: User;
 
   constructor(private helper: JwtHelperService) {
-    const config = window['config']();
-    this.user = helper.decodeToken(localStorage.getItem(`${config.STORAGEPREFIX}-token`));
+    const storagePrefix = window['config']().STORAGEPREFIX;
+    this.user = helper.decodeToken(localStorage.getItem(`${storagePrefix}-token`));
   }
 
   ngAfterViewInit() {
