@@ -19,13 +19,12 @@ export class ObjectRestService {
   getYourObject() {
     return this.httpClient.get(`${this.url}/object`)
       .pipe(
-        catchError(errorRes => {
+        catchError(({ error }) => {
           const modalRef = this.modal.open(AlertComponent),
             title = 'Error',
-            message = errorRes.message;
+            message = error.message;
           Object.assign(modalRef.componentInstance, { title, message });
-          console.log(errorRes);
-          return throwError(errorRes.message);
+          return throwError(error.message);
         }),
       );
   }

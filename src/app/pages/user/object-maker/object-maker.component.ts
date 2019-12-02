@@ -21,7 +21,11 @@ export class ObjectMakerComponent implements OnInit {
   async ngOnInit() {
     this.data = await this.httpClient.get<ObjectMaker[]>('./assets/test/object.test.json').toPromise();
     console.log(this.data);
-    const test = await this.objectRest.getYourObject().toPromise();
+    try {
+      const test = await this.objectRest.getYourObject().toPromise();
+    } catch (error) {
+
+    }
   }
 
   openObjectForm() {
