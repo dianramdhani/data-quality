@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 import { AuthenticationRestService } from '../../services';
 
@@ -11,7 +12,7 @@ import { AuthenticationRestService } from '../../services';
 export class LoginComponent implements OnInit {
   formLogin: FormGroup;
 
-  constructor(private auth: AuthenticationRestService) {
+  constructor(private auth: AuthenticationRestService, private router: Router) {
     this.formLogin = new FormGroup({
       username: new FormControl(null, Validators.required),
       password: new FormControl(null, Validators.required)
@@ -21,8 +22,7 @@ export class LoginComponent implements OnInit {
   ngOnInit() { }
 
   login() {
-    console.log(this.formLogin.value);
     this.auth.login(this.formLogin.value)
-      .subscribe(res => console.log(res));
+      .subscribe(() => this.router.navigate(['dashboard']));
   }
 }

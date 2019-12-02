@@ -18,7 +18,11 @@ export class AuthenticationRestService {
 
   login(args: { username: string, password: string }): Observable<AuthResponse> {
     return this.httpClient.post<AuthResponse>(`${this.url}/login`, args)
-      .pipe(tap(res => localStorage.setItem(`${this.storagePrefix}-auth`, JSON.stringify(res))))
+      .pipe(tap(({ token }) => localStorage.setItem(`${this.storagePrefix}-token`, token)))
+  }
+
+  logout() {
+    localStorage.removeItem(`${this.storagePrefix}-token`);
   }
 }
 

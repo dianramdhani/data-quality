@@ -26,9 +26,11 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
         useFactory: () => {
           const config = window['config']();
           return {
-            tokenGetter: () => localStorage.getItem(`${config.STORAGEPREFIX}-auth`),
-            whitelistedDomains: [config.API],
-            blacklistedRoutes: [`${config.API}/login`]
+            tokenGetter: () => localStorage.getItem(`${config.STORAGEPREFIX}-token`),
+            headerName: 'token',
+            authScheme: '',
+            whitelistedDomains: config.whitelistedDomains,
+            blacklistedRoutes: config.blacklistedRoutes
           };
         }
       }
