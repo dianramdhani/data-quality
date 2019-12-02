@@ -26,12 +26,14 @@ import { ListDataComponent } from './pages/user/source-data-upload/list-data/lis
 import { FindMatchComponent } from './pages/user/source-data-upload/find-match/find-match.component';
 import { MergeFormComponent } from './pages/user/source-data-upload/merge-form/merge-form.component';
 import { AccountSettingsComponent } from './pages/user/account-settings/account-settings.component';
+import { AlertComponent } from './core/alert/alert.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SpinnerComponent,
     WrapperComponent,
+    AlertComponent,
     LoginComponent,
     UserComponent,
     DashboardComponent,
@@ -71,6 +73,7 @@ import { AccountSettingsComponent } from './pages/user/account-settings/account-
   providers: [],
   bootstrap: [AppComponent],
   entryComponents: [
+    AlertComponent,
     RuleFormComponent,
     ObjectFormComponent
   ]
