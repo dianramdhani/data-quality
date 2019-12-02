@@ -1,0 +1,23 @@
+<div class="card">
+    <h6 class="card-header mg-b-0 bd-b-0">List File</h6>
+    <div class="table-responsive">
+        <table class="table table-hover table-dashboard mb-0">
+            <thead>
+                <tr>
+                    <th>Upload Date</th>
+                    <th>File Name</th>
+                    <th>Size File (Byte)</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let file of files" routerLink="./list-data">
+                    <td>{{ file.uploadDate | date }}</td>
+                    <td>{{ file.filename }}</td>
+                    <td>{{ file.filesize }}</td>
+                    <td>{{ file.status }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

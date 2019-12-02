@@ -1,0 +1,31 @@
+<div class="card">
+    <div class="card-header bd-b-0 d-md-flex justify-content-between">
+        <h6 class="mg-b-0">List Data</h6>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb breadcrumb-style2 mg-b-0">
+                <li class="breadcrumb-item"><a href="" routerLink="../">List File</a></li>
+                <li class="breadcrumb-item active" aria-current="page">List Data</li>
+            </ol>
+        </nav>
+    </div>
+    <div class="table-responsive">
+        <table class="table table-hover table-dashboard mb-0">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>NPWP</th>
+                    <th>Date of Birth</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let datum of data" routerLink="./find-match" routerLinkActive="router-link-active">
+                    <td>{{ datum.fullName }}</td>
+                    <td>{{ datum.npwp }}</td>
+                    <td>{{ datum.dob }}</td>
+                    <td>{{ datum.status }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -20,6 +20,10 @@ import { ObjectMakerComponent } from './pages/user/object-maker/object-maker.com
 import { NormalizeRuleComponent } from './pages/user/normalize-rule/normalize-rule.component';
 import { RuleFormComponent } from './pages/user/normalize-rule/rule-form/rule-form.component';
 import { SourceDataUploadComponent } from './pages/user/source-data-upload/source-data-upload.component';
+import { ListFileComponent } from './pages/user/source-data-upload/list-file/list-file.component';
+import { ListDataComponent } from './pages/user/source-data-upload/list-data/list-data.component';
+import { FindMatchComponent } from './pages/user/source-data-upload/find-match/find-match.component';
+import { MergeFormComponent } from './pages/user/source-data-upload/merge-form/merge-form.component';
 import { AccountSettingsComponent } from './pages/user/account-settings/account-settings.component';
 
 @NgModule({
@@ -29,12 +33,16 @@ import { AccountSettingsComponent } from './pages/user/account-settings/account-
     WrapperComponent,
     LoginComponent,
     UserComponent,
-    AccountSettingsComponent,
-    ObjectMakerComponent,
     DashboardComponent,
+    ObjectMakerComponent,
     NormalizeRuleComponent,
+    RuleFormComponent,
     SourceDataUploadComponent,
-    RuleFormComponent
+    ListFileComponent,
+    ListDataComponent,
+    FindMatchComponent,
+    MergeFormComponent,
+    AccountSettingsComponent
   ],
   imports: [
     BrowserModule,

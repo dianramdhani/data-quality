@@ -1,0 +1,80 @@
+<div class="card">
+    <div class="card-header bd-b-0 d-md-flex justify-content-between">
+        <h6 class="mg-b-0">Find Match</h6>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb breadcrumb-style2 mg-b-0">
+                <li class="breadcrumb-item"><a href="" routerLink="../../">List File</a></li>
+                <li class="breadcrumb-item"><a href="" routerLink="../">List Data</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Find Match</li>
+            </ol>
+        </nav>
+    </div>
+    <div class="card-body pd-t-0 row row-xs">
+        <div class="col-lg-4 col-xl-3">
+            <div class="card">
+                <h6 class="card-header mg-b-0 tx-gray-500">Detail Data</h6>
+                <div class="card-body pd-lg-25 d-flex align-items-center justify-content-center">
+                    <img class="photo" src="./assets/img/sample.jpg">
+                </div>
+                <div class="card-footer pd-20">
+                    <div class="col mg-b-5">
+                        <div class="row mg-b-5">
+                            <div class="col-sm-6 col-lg-12 tx-gray-500 tx-11">NPWP</div>
+                            <div class="col-sm-6 col-lg-12 ">npwp</div>
+                        </div>
+
+                        <div class="row mg-b-5">
+                            <div class="col-sm-6 col-lg-12 tx-gray-500 tx-11">NIK</div>
+                            <div class="col-sm-6 col-lg-12">nik</div>
+                        </div>
+
+                        <div class="row mg-b-5">
+                            <div class="col-sm-6 col-lg-12 tx-gray-500 tx-11">Full Name</div>
+                            <div class="col-sm-6 col-lg-12">fullname</div>
+                        </div>
+
+                        <div class="row mg-b-5">
+                            <div class="col-sm-6 col-lg-12 tx-gray-500 tx-11">Place of Birth</div>
+                            <div class="col-sm-6 col-lg-12">place-of birth</div>
+                        </div>
+
+                        <div class="row mg-b-5">
+                            <div class="col-sm-6 col-lg-12 tx-gray-500 tx-11">Date of Birth</div>
+                            <div class="col-sm-6 col-lg-12">dob</div>
+                        </div>
+
+                        <div class="row mg-b-5">
+                            <div class="col-sm-6 col-lg-12 tx-gray-500 tx-11">Full Address</div>
+                            <div class="col-sm-6 col-lg-12">full address</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-8 col-xl-9 mg-t-10 mg-lg-t-0">
+            <div class="card">
+                <h6 class="card-header bd-b-0 tx-gray-500">List Possible Match</h6>
+                <div class="table-responsive">
+                    <table class="table table-hover align-self-auto mg-b-0">
+                        <thead>
+                            <tr>
+                                <th>NPWP</th>
+                                <th>NIK</th>
+                                <th>Full Name</th>
+                                <th>Score</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let datum of dataMatch" routerLink="./merge-form">
+                                <td>{{ datum.npwp }}</td>
+                                <td>{{ datum.nik }}</td>
+                                <td>{{ datum.fullName }}</td>
+                                <td>{{ datum.score }}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
