@@ -20,7 +20,7 @@ export class AuthenticationRestService {
   login(args: { username: string, password: string }): Observable<AuthResponse> {
     return this.httpClient.post<AuthResponse>(`${this.url}/login`, args)
       .pipe(
-        catchError(errorRes => throwError(errorRes.message)),
+        catchError(({ error }) => throwError(error.message)),
         tap(({ token }) => localStorage.setItem(`${this.storagePrefix}-token`, token))
       );
   }

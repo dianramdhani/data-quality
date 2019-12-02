@@ -34,7 +34,7 @@ const routes: Routes = [
       { path: 'account-settings', component: AccountSettingsComponent },
     ]
   },
-  { path: '**', redirectTo: 'login' }
+  { path: '**', redirectTo: '/user/dashboard' }
 ];
 
 @NgModule({
