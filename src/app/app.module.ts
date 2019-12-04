@@ -18,8 +18,7 @@ import { UserComponent } from './pages/user/user.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { ObjectMakerComponent } from './pages/object-maker/object-maker.component';
 import { ObjectFormComponent } from './pages/object-maker/object-form/object-form.component';
-import { NormalizeRuleComponent } from './pages/normalize-rule/normalize-rule.component';
-import { RuleFormComponent } from './pages/normalize-rule/rule-form/rule-form.component';
+import { RuleFormComponent } from './pages/normalize-rule-v2/rule-form/rule-form.component';
 import { SourceDataUploadComponent } from './pages/source-data-upload/source-data-upload.component';
 import { ListFileComponent } from './pages/source-data-upload/list-file/list-file.component';
 import { ListDataComponent } from './pages/source-data-upload/list-data/list-data.component';
@@ -41,7 +40,6 @@ import { DuplicateFormComponent } from './pages/normalize-rule-v2/duplicate-form
     DashboardComponent,
     ObjectMakerComponent,
     ObjectFormComponent,
-    NormalizeRuleComponent,
     RuleFormComponent,
     SourceDataUploadComponent,
     ListFileComponent,

@@ -20,10 +20,10 @@
         </div>
 
         <div class="tx-right" [hidden]="duplicate">
-            <button class="btn btn-primary btn-icon mg-r-5">
+            <button class="btn btn-primary btn-icon mg-r-5" title="Create new rule" (click)="showRuleForm(type.NEW)">
                 <i data-feather="plus"></i>
             </button>
-            <button class="btn btn-primary btn-icon" (click)="showDuplicate()">
+            <button class="btn btn-primary btn-icon" (click)="showDuplicate()" title="Duplicate rule">
                 <i data-feather="copy"></i>
             </button>
         </div>
@@ -52,7 +52,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr *ngFor="let rule of rules">
+                    <tr *ngFor="let rule of rules" (click)="showRuleForm(type.UPDATE, rule)">
                         <td>{{ rule.fieldName }}</td>
                         <td>{{ rule.oldContent }}</td>
                         <td>{{ rule.newContent }}</td>

@@ -4,6 +4,7 @@ import { HttpClient } from '@angular/common/http';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 import { DuplicateFormComponent } from './duplicate-form/duplicate-form.component';
+import { RuleFormComponent, Type } from './rule-form/rule-form.component';
 
 @Component({
   selector: 'app-normalize-rule-v2',
@@ -11,6 +12,7 @@ import { DuplicateFormComponent } from './duplicate-form/duplicate-form.componen
   styleUrls: ['./normalize-rule-v2.component.scss']
 })
 export class NormalizeRuleV2Component implements OnInit {
+  type = Type;
   rules: Rule[];
   duplicate: boolean;
 
@@ -33,5 +35,13 @@ export class NormalizeRuleV2Component implements OnInit {
 
   showDuplicateForm() {
     const modalRef = this.modal.open(DuplicateFormComponent);
+  }
+
+  showRuleForm(type: Type, rule?: Rule) {
+    const modalRef = this.modal.open(RuleFormComponent);
+    Object.assign(modalRef.componentInstance, { type, rule });
+    modalRef.componentInstance.refresh.subscribe(() => {
+      console.log('ini refresh table');
+    });
   }
 }
