@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Rule } from './rule.model';
 import { HttpClient } from '@angular/common/http';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+
+import { DuplicateFormComponent } from './duplicate-form/duplicate-form.component';
 
 @Component({
   selector: 'app-normalize-rule-v2',
@@ -11,7 +14,7 @@ export class NormalizeRuleV2Component implements OnInit {
   rules: Rule[];
   duplicate: boolean;
 
-  constructor(private httpClient: HttpClient) {
+  constructor(private httpClient: HttpClient, private modal: NgbModal) {
     this.duplicate = false;
   }
 
@@ -26,5 +29,9 @@ export class NormalizeRuleV2Component implements OnInit {
 
   hideDuplicate() {
     this.duplicate = false;
+  }
+
+  showDuplicateForm() {
+    const modalRef = this.modal.open(DuplicateFormComponent);
   }
 }

@@ -79,7 +79,8 @@ import { DuplicateFormComponent } from './pages/normalize-rule-v2/duplicate-form
   entryComponents: [
     AlertComponent,
     RuleFormComponent,
-    ObjectFormComponent
+    ObjectFormComponent,
+    DuplicateFormComponent
   ]
 })
 export class AppModule { }
