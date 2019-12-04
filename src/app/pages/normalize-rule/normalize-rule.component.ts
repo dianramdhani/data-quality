@@ -2,16 +2,17 @@ import { Component, OnInit } from '@angular/core';
 import { Rule } from './rule.model';
 import { HttpClient } from '@angular/common/http';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { replace } from 'feather-icons';
 
 import { DuplicateFormComponent } from './duplicate-form/duplicate-form.component';
 import { RuleFormComponent, Type } from './rule-form/rule-form.component';
 
 @Component({
-  selector: 'app-normalize-rule-v2',
-  templateUrl: './normalize-rule-v2.component.html',
-  styleUrls: ['./normalize-rule-v2.component.scss']
+  selector: 'app-normalize-rule',
+  templateUrl: './normalize-rule.component.html',
+  styleUrls: ['./normalize-rule.component.scss']
 })
-export class NormalizeRuleV2Component implements OnInit {
+export class NormalizeRuleComponent implements OnInit {
   type = Type;
   rules: Rule[];
   duplicate: boolean;
@@ -21,8 +22,8 @@ export class NormalizeRuleV2Component implements OnInit {
   }
 
   async ngOnInit() {
+    replace();
     this.rules = await this.httpClient.get<Rule[]>('./assets/test/rules.test.json').toPromise();
-    console.log(this.rules);
   }
 
   showDuplicate() {

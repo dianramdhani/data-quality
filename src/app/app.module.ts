@@ -11,6 +11,7 @@ import { AppComponent } from './app.component';
 // CORE
 import { SpinnerComponent } from './core/spinner/spinner.component';
 import { WrapperComponent } from './core/wrapper/wrapper.component';
+import { AlertComponent } from './core/alert/alert.component';
 
 // PAGES
 import { LoginComponent } from './pages/login/login.component';
@@ -18,16 +19,15 @@ import { UserComponent } from './pages/user/user.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { ObjectMakerComponent } from './pages/object-maker/object-maker.component';
 import { ObjectFormComponent } from './pages/object-maker/object-form/object-form.component';
-import { RuleFormComponent } from './pages/normalize-rule-v2/rule-form/rule-form.component';
+import { NormalizeRuleComponent } from './pages/normalize-rule/normalize-rule.component';
+import { RuleFormComponent } from './pages/normalize-rule/rule-form/rule-form.component';
+import { DuplicateFormComponent } from './pages/normalize-rule/duplicate-form/duplicate-form.component';
 import { SourceDataUploadComponent } from './pages/source-data-upload/source-data-upload.component';
 import { ListFileComponent } from './pages/source-data-upload/list-file/list-file.component';
 import { ListDataComponent } from './pages/source-data-upload/list-data/list-data.component';
 import { FindMatchComponent } from './pages/source-data-upload/find-match/find-match.component';
 import { MergeFormComponent } from './pages/source-data-upload/merge-form/merge-form.component';
 import { AccountSettingsComponent } from './pages/account-settings/account-settings.component';
-import { AlertComponent } from './core/alert/alert.component';
-import { NormalizeRuleV2Component } from './pages/normalize-rule-v2/normalize-rule-v2.component';
-import { DuplicateFormComponent } from './pages/normalize-rule-v2/duplicate-form/duplicate-form.component';
 
 @NgModule({
   declarations: [
@@ -40,15 +40,15 @@ import { DuplicateFormComponent } from './pages/normalize-rule-v2/duplicate-form
     DashboardComponent,
     ObjectMakerComponent,
     ObjectFormComponent,
+    NormalizeRuleComponent,
     RuleFormComponent,
+    DuplicateFormComponent,
     SourceDataUploadComponent,
     ListFileComponent,
     ListDataComponent,
     FindMatchComponent,
     MergeFormComponent,
-    AccountSettingsComponent,
-    NormalizeRuleV2Component,
-    DuplicateFormComponent
+    AccountSettingsComponent
   ],
   imports: [
     BrowserModule,
