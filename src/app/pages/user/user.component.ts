@@ -31,6 +31,12 @@ export class UserComponent {
       },
       {
         type: Type.LINK,
+        label: 'Normalize Rule V2',
+        icon: 'check-square',
+        state: { to: '/user/normalize-rule-v2', params: {} }
+      },
+      {
+        type: Type.LINK,
         label: 'Source Data Upload',
         icon: 'upload-cloud',
         state: { to: '/user/source-data-upload', params: {} }

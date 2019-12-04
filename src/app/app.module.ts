@@ -27,6 +27,8 @@ import { FindMatchComponent } from './pages/source-data-upload/find-match/find-m
 import { MergeFormComponent } from './pages/source-data-upload/merge-form/merge-form.component';
 import { AccountSettingsComponent } from './pages/account-settings/account-settings.component';
 import { AlertComponent } from './core/alert/alert.component';
+import { NormalizeRuleV2Component } from './pages/normalize-rule-v2/normalize-rule-v2.component';
+import { DuplicateFormComponent } from './pages/normalize-rule-v2/duplicate-form/duplicate-form.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +48,9 @@ import { AlertComponent } from './core/alert/alert.component';
     ListDataComponent,
     FindMatchComponent,
     MergeFormComponent,
-    AccountSettingsComponent
+    AccountSettingsComponent,
+    NormalizeRuleV2Component,
+    DuplicateFormComponent
   ],
   imports: [
     BrowserModule,

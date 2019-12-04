@@ -8,6 +8,7 @@ import { UserComponent } from './pages/user/user.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { ObjectMakerComponent } from './pages/object-maker/object-maker.component';
 import { NormalizeRuleComponent } from './pages/normalize-rule/normalize-rule.component';
+import { NormalizeRuleV2Component } from './pages/normalize-rule-v2/normalize-rule-v2.component';
 import { SourceDataUploadComponent } from './pages/source-data-upload/source-data-upload.component';
 import { ListFileComponent } from './pages/source-data-upload/list-file/list-file.component';
 import { ListDataComponent } from './pages/source-data-upload/list-data/list-data.component';
@@ -23,6 +24,7 @@ const routes: Routes = [
       { path: 'dashboard', component: DashboardComponent },
       { path: 'object-maker', component: ObjectMakerComponent },
       { path: 'normalize-rule', component: NormalizeRuleComponent },
+      { path: 'normalize-rule-v2', component: NormalizeRuleV2Component },
       {
         path: 'source-data-upload', component: SourceDataUploadComponent, children: [
           { path: '', component: ListFileComponent },

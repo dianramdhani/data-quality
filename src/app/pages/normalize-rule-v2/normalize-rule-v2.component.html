@@ -1,0 +1,85 @@
+<div class="d-md-flex align-items-center justify-content-between mg-b-20 mg-lg-b-25 mg-xl-b-30">
+    <h4 class="mg-b-0 tx-spacing--1">Normalize Rule V2</h4>
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb breadcrumb-style1 mg-b-10">
+            <li class="breadcrumb-item">Home</li>
+            <li class="breadcrumb-item active" aria-current="page">Normalize Rule V2</li>
+        </ol>
+    </nav>
+</div>
+<div class="card">
+    <h6 class="card-header mg-b-0">List Rules</h6>
+    <div class="card-body">
+        <div class="form-inline form-group">
+            <label class="mg-r-10" for="objects">Object</label>
+            <select id="objects" class="form-control formcon">
+                <option value="1">Object 1</option>
+                <option value="2">Object 2</option>
+                <option value="3">Object 3</option>
+            </select>
+        </div>
+
+        <div class="tx-right" [hidden]="duplicate">
+            <button class="btn btn-primary btn-icon mg-r-5">
+                <i data-feather="plus"></i>
+            </button>
+            <button class="btn btn-primary btn-icon" (click)="showDuplicate()">
+                <i data-feather="copy"></i>
+            </button>
+        </div>
+        <div class="form-inline justify-content-end" [hidden]="!duplicate">
+            <div class="form-group mg-r-15">
+                <label class="mg-r-10" for="objects">Column</label>
+                <select id="objects" class="form-control formcon">
+                    <option value="1">Col 1</option>
+                    <option value="2">Col 2</option>
+                    <option value="3">Col 3</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <button class="btn btn-primary mg-r-5">Process</button>
+                <button class="btn btn-danger" (click)="hideDuplicate()">Cancel</button>
+            </div>
+        </div>
+
+        <div class="table-responsive mg-t-10" [hidden]="duplicate">
+            <table class="table table-hover mb-0">
+                <thead>
+                    <tr>
+                        <th>Field Name</th>
+                        <th>Old Content</th>
+                        <th>New Content</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let rule of rules">
+                        <td>{{ rule.fieldName }}</td>
+                        <td>{{ rule.oldContent }}</td>
+                        <td>{{ rule.newContent }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="table-responsive mg-t-10" [hidden]="!duplicate">
+            <table class="table table-hover mb-0">
+                <thead>
+                    <tr>
+                        <th>Field Name</th>
+                        <th>Old Content</th>
+                        <th>New Content</th>
+                        <th>Select to Duplicate</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let rule of rules">
+                        <td>{{ rule.fieldName }}</td>
+                        <td>{{ rule.oldContent }}</td>
+                        <td>{{ rule.newContent }}</td>
+                        <td><input type="checkbox"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
