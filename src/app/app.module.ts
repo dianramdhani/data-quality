@@ -11,6 +11,7 @@ import { AppComponent } from './app.component';
 // CORE
 import { SpinnerComponent } from './core/spinner/spinner.component';
 import { WrapperComponent } from './core/wrapper/wrapper.component';
+import { AlertComponent } from './core/alert/alert.component';
 
 // PAGES
 import { LoginComponent } from './pages/login/login.component';
@@ -20,13 +21,13 @@ import { ObjectMakerComponent } from './pages/object-maker/object-maker.componen
 import { ObjectFormComponent } from './pages/object-maker/object-form/object-form.component';
 import { NormalizeRuleComponent } from './pages/normalize-rule/normalize-rule.component';
 import { RuleFormComponent } from './pages/normalize-rule/rule-form/rule-form.component';
+import { DuplicateFormComponent } from './pages/normalize-rule/duplicate-form/duplicate-form.component';
 import { SourceDataUploadComponent } from './pages/source-data-upload/source-data-upload.component';
 import { ListFileComponent } from './pages/source-data-upload/list-file/list-file.component';
 import { ListDataComponent } from './pages/source-data-upload/list-data/list-data.component';
 import { FindMatchComponent } from './pages/source-data-upload/find-match/find-match.component';
 import { MergeFormComponent } from './pages/source-data-upload/merge-form/merge-form.component';
 import { AccountSettingsComponent } from './pages/account-settings/account-settings.component';
-import { AlertComponent } from './core/alert/alert.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +42,7 @@ import { AlertComponent } from './core/alert/alert.component';
     ObjectFormComponent,
     NormalizeRuleComponent,
     RuleFormComponent,
+    DuplicateFormComponent,
     SourceDataUploadComponent,
     ListFileComponent,
     ListDataComponent,
@@ -75,7 +77,8 @@ import { AlertComponent } from './core/alert/alert.component';
   entryComponents: [
     AlertComponent,
     RuleFormComponent,
-    ObjectFormComponent
+    ObjectFormComponent,
+    DuplicateFormComponent
   ]
 })
 export class AppModule { }
