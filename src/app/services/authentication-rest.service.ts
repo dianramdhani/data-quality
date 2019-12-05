@@ -9,7 +9,6 @@ import { Observable, throwError } from 'rxjs';
 export class AuthenticationRestService {
   private url: string;
   private storagePrefix: string;
-  private user: AuthResponse;
 
   constructor(private httpClient: HttpClient) {
     const config = window['config']();
@@ -17,22 +16,15 @@ export class AuthenticationRestService {
     this.storagePrefix = config.STORAGEPREFIX;
   }
 
-  login(args: { username: string, password: string }): Observable<AuthResponse> {
-    return this.httpClient.post<AuthResponse>(`${this.url}/login`, args)
+  login(args: { username: string, password: string }) {
+    return this.httpClient.post(`${this.url}/login`, args, { responseType: 'text' })
       .pipe(
         catchError(({ error }) => throwError(error.message)),
-        tap(({ token }) => localStorage.setItem(`${this.storagePrefix}-token`, token))
+        tap(token => localStorage.setItem(`${this.storagePrefix}-token`, token))
       );
   }
 
   logout() {
     localStorage.removeItem(`${this.storagePrefix}-token`);
   }
-}
-
-interface AuthResponse {
-  name: string,
-  role: string,
-  token: string,
-  uid: string
 }

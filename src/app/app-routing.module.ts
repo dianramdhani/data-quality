@@ -19,7 +19,7 @@ import { AccountSettingsComponent } from './pages/account-settings/account-setti
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
   {
-    path: 'user', component: UserComponent, canActivate: [AuthGuard], children: [
+    path: 'user', component: UserComponent, canActivate: [AuthGuard], data: { role: 'ADMIN' }, children: [
       { path: 'dashboard', component: DashboardComponent },
       { path: 'object-maker', component: ObjectMakerComponent },
       { path: 'normalize-rule', component: NormalizeRuleComponent },
