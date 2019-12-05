@@ -35,7 +35,7 @@ export class LoginComponent implements OnInit {
           const user = this.helper.decodeToken(token);
           switch (user.role) {
             case 'ADMIN':
-              this.router.navigate(['/user/dashboard']);
+              this.router.navigate(['/admin/dashboard']);
               break;
             case 'USER':
               this.router.navigate(['/user/dashboard']);
