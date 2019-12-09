@@ -14,12 +14,13 @@ import { ListDataComponent } from './pages/source-data-upload/list-data/list-dat
 import { FindMatchComponent } from './pages/source-data-upload/find-match/find-match.component';
 import { MergeFormComponent } from './pages/source-data-upload/merge-form/merge-form.component';
 import { AccountSettingsComponent } from './pages/account-settings/account-settings.component';
+import { AdminComponent } from './pages/admin/admin.component';
 
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
   {
-    path: 'user', component: UserComponent, canActivate: [AuthGuard], children: [
+    path: 'admin', component: AdminComponent, canActivate: [AuthGuard], data: { role: 'ADMIN' }, children: [
       { path: 'dashboard', component: DashboardComponent },
       { path: 'object-maker', component: ObjectMakerComponent },
       { path: 'normalize-rule', component: NormalizeRuleComponent },
@@ -34,7 +35,23 @@ const routes: Routes = [
       { path: 'account-settings', component: AccountSettingsComponent },
     ]
   },
-  { path: '**', redirectTo: '/user/dashboard' }
+  {
+    path: 'user', component: AdminComponent, canActivate: [AuthGuard], data: { role: 'USER' }, children: [
+      { path: 'dashboard', component: DashboardComponent },
+      { path: 'object-maker', component: ObjectMakerComponent },
+      { path: 'normalize-rule', component: NormalizeRuleComponent },
+      {
+        path: 'source-data-upload', component: SourceDataUploadComponent, children: [
+          { path: '', component: ListFileComponent },
+          { path: 'list-data', component: ListDataComponent },
+          { path: 'list-data/find-match', component: FindMatchComponent },
+          { path: 'list-data/find-match/merge-form', component: MergeFormComponent }
+        ]
+      },
+      { path: 'account-settings', component: AccountSettingsComponent },
+    ]
+  },
+  { path: '**', redirectTo: 'login' }
 ];
 
 @NgModule({

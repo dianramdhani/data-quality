@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { JwtHelperService } from '@auth0/angular-jwt';
 
 import { AuthenticationRestService } from 'src/app/services';
 
@@ -14,7 +15,7 @@ export class LoginComponent implements OnInit {
   error: string;
   spinner = false;
 
-  constructor(private auth: AuthenticationRestService, private router: Router) {
+  constructor(private auth: AuthenticationRestService, private router: Router, private helper: JwtHelperService) {
     this.formLogin = new FormGroup({
       username: new FormControl(null, Validators.required),
       password: new FormControl(null, Validators.required)
@@ -28,9 +29,18 @@ export class LoginComponent implements OnInit {
   login() {
     this.auth.login(this.formLogin.value)
       .subscribe(
-        () => {
+        token => {
           this.spinner = false;
-          this.router.navigate(['/user/dashboard']);
+
+          const user = this.helper.decodeToken(token);
+          switch (user.role) {
+            case 'ADMIN':
+              this.router.navigate(['/admin/dashboard']);
+              break;
+            case 'USER':
+              this.router.navigate(['/user/dashboard']);
+              break
+          }
         },
         errMsg => {
           this.spinner = false;
