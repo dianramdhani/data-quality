@@ -29,6 +29,7 @@ import { FindMatchComponent } from './pages/source-data-upload/find-match/find-m
 import { MergeFormComponent } from './pages/source-data-upload/merge-form/merge-form.component';
 import { AccountSettingsComponent } from './pages/account-settings/account-settings.component';
 import { AdminComponent } from './pages/admin/admin.component';
+import { UserManagementComponent } from './pages/user-management/user-management.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +51,8 @@ import { AdminComponent } from './pages/admin/admin.component';
     FindMatchComponent,
     MergeFormComponent,
     AccountSettingsComponent,
-    AdminComponent
+    AdminComponent,
+    UserManagementComponent
   ],
   imports: [
     BrowserModule,

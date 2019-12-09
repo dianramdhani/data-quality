@@ -19,6 +19,12 @@ export class AdminComponent {
       },
       {
         type: Type.LINK,
+        label: 'User Management',
+        icon: 'users',
+        state: { to: '/admin/user-management', params: {} }
+      },
+      {
+        type: Type.LINK,
         label: 'Object Maker',
         icon: 'database',
         state: { to: '/admin/object-maker', params: {} }
